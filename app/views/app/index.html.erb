@@ -1,0 +1,47 @@
+
+<div id="container" class="ng-cloak container">
+  <div ng-view></div>
+</div>
+
+<script type="text/ng-template" id="blackscholes.html">
+  <h1>Black-Scholes Calculator</h1>
+  <form ng-submit="calc()">
+    <table>
+      <tr>
+        <td>Strike Price:</td>
+        <td><input ng-model="strike" autofocus /></td>
+      </tr>
+      <tr>
+        <td>Underlying Price:</td>
+        <td><input ng-model="underlying"/></td>
+      </tr>
+      <tr>
+        <td>Time to expiration (days):</td>
+        <td><input ng-model="tte"/></td>
+      </tr>
+      <tr>
+        <td>Interest Rate (percent):</td>
+        <td><input ng-model="ir"/></td>
+      </tr>
+      <tr>
+        <td>Volatility (percent):</td>
+        <td><input ng-model="volatility"/></td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr/></td>
+      </tr>
+      <tr>
+        <td>Call:</td>
+        <td>{{theoreticalCall}}</td>
+      </tr>
+      <tr>
+        <td>Put:</td>
+        <td>{{theoreticalPut}}</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button>Calculate</button></td>
+      </tr>
+    </table>
+  </form>
+</script>
