@@ -1,0 +1,15 @@
+{
+    "name": "options"
+  , "version": "0.0.1"
+  , "engines": {
+    "node": ">= 0.8.4"
+  }
+  , "devDependencies": {
+      "grunt": ">= 0.3.11"
+      , "testacular": "0.4.0"
+  }
+  , "scripts" :
+  { 
+    "test" : "./node_modules/.bin/testacular start testacular.conf.js" 
+  }
+}
