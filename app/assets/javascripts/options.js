@@ -1,4 +1,4 @@
-angular.module('options', ['options.blackscholes']).
+angular.module('options', ['options.tools']).
   config(['$routeProvider', function($routeProvider){
     $routeProvider.
       when('/model/blackscholes', { templateUrl: 'blackscholes.html', controller: ModelController }).

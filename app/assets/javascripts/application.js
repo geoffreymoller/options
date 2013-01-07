@@ -13,6 +13,9 @@
 //= require jquery
 //= require jquery_ujs
 //= require underscore-min
+//= require angular 
+//= require angular-mocks 
+//= require angular-resource.min 
 //= require model/blackscholes
 //= require controllers/model 
 //= require_tree .

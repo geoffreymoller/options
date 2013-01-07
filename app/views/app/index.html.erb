@@ -16,28 +16,83 @@
         <td><input ng-model="underlying"/></td>
       </tr>
       <tr>
-        <td>Time to expiration (days):</td>
-        <td><input ng-model="tte"/></td>
+        <td>Time to expiration:</td>
+        <td><input ng-model="tte"/> (days)</td>
       </tr>
       <tr>
-        <td>Interest Rate (percent):</td>
-        <td><input ng-model="ir"/></td>
+        <td>Interest Rate :</td>
+        <td><input ng-model="ir"/> (percent as a whole number)</td>
       </tr>
       <tr>
-        <td>Volatility (percent):</td>
-        <td><input ng-model="volatility"/></td>
+        <td>Volatility:</td>
+        <td><input ng-model="volatility"/> (percent as a whole number)</td>
       </tr>
       <tr>
         <td colspan="2"><hr/></td>
       </tr>
+
       <tr>
-        <td>Call:</td>
-        <td>{{theoreticalCall}}</td>
+        <td><strong>Call:</strong></td>
+        <td>{{call | number:5}}</td>
       </tr>
       <tr>
-        <td>Put:</td>
-        <td>{{theoreticalPut}}</td>
+        <td>delta:</td>
+        <td>{{callDelta | number:5}}</td>
       </tr>
+      <tr>
+        <td>gamma:</td>
+        <td>{{callGamma | number:5}}</td>
+      </tr>
+      <tr>
+        <td>vega:</td>
+        <td>{{callVega | number:5}}</td>
+      </tr>
+      <tr>
+        <td>theta:</td>
+        <td>{{callTheta | number:5}}</td>
+      </tr>
+
+      <tr>
+        <td colspan="2"><hr/></td>
+      </tr>
+
+      <tr>
+        <td><strong>Put:</strong></td>
+        <td>{{put | number:5}}</td>
+      </tr>
+      <tr>
+        <td>delta:</td>
+        <td>{{putDelta | number:5}}</td>
+      </tr>
+      <tr>
+        <td>theta:</td>
+        <td>{{putTheta | number:5}}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><hr/></td>
+      </tr>
+
+      <tr>
+        <td>d1:</td>
+        <td>{{d1 | number:5}}</td>
+      </tr>
+      <tr>
+        <td>N1:</td>
+        <td>{{N1 | number:5}}</td>
+      </tr>
+      <tr>
+        <td>N1_:</td>
+        <td>{{N1_ | number:5}}</td>
+      </tr>
+      <tr>
+        <td>d2:</td>
+        <td>{{d2 | number:5}}</td>
+      </tr>
+      <tr>
+        <td>N2:</td>
+        <td>{{N2 | number:5}}</td>
+      </tr>
+
       <tr>
         <td></td>
         <td><button>Calculate</button></td>
@@ -45,3 +100,5 @@
     </table>
   </form>
 </script>
+
+
